@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#0a0a0a,#3a4452);
+}
+.header {
+    width: 100%;
+    line-height: 3rem;
+    background-color: transparent ;/* Dark background color */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 0px 0; /* Padding for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    position:fixed; /* Fix the header at the top */
+    top: 0; /* Align it to the top */
+    left: 0;
+    z-index: 20; /* Ensure it's above other elements */
+}
+.calculator{
+    border: 1px solid #717377;
+    padding:20px;
+    border-radius: 16px;
+    background-color: transparent;
+    box-shadow: 0px 3px 15px rgba(113,115,119,0.5);
+
+
+}
+
+input{
+    width:320px;
+    border:none;
+    padding: 2px;
+    margin:10px;
+    background:transparent;
+    box-shadow: 0px 3px 15px rgba(84,84,84,0.1);
+    font-size:40px;
+    text-align: right;
+    cursor: pointer;
+    color:white;
+}
+input::placeholder{
+    color:#ffff;
+}
+button{
+    border:none;
+    width:60px;
+    height:60px;
+    margin:10px;
+    border-radius: 50%;
+    background:transparent;
+    color:white;
+    font-size:20px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1);
+    cursor:pointer;
+
+}
+.equalBtn{
+    background-color: orange;
+}
+.operator{
+    color:#6dee0a
+}
