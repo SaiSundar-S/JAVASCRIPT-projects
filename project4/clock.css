@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.container {
+    position: relative;
+    display: flex; /* Ensure child elements align in a column */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align clock and time text */
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #2c2929;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* To position clock hands correctly */
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2;
+}
+
+.clock .name {
+    padding: 0px;
+    margin-top: 11rem;
+}
+
+.name {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 5px;
+}
+
+.name i {
+    color: rgb(246, 243, 239);
+}
+
+.name span {
+    position: static;
+    display: inline-block;
+    align-items: center;
+}
+
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i {
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
+
+.container .time{
+    font-style: italic;
+    color:rgb(210, 14, 14);
+    line-height: 10;
+    font-size: 20px;
+    font-family: sans-serif;
+    
+}
